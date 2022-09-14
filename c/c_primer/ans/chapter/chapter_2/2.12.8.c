@@ -2,7 +2,7 @@
  * @Author: qksuki qksuki@outlook.com
  * @Date: 2022-09-14 19:19:51
  * @LastEditors: qksuki qksuki@outlook.com
- * @LastEditTime: 2022-09-14 19:25:36
+ * @LastEditTime: 2022-09-14 21:47:09
  * @FilePath: \codes\c\c_primer\ans\chapter\chapter_2\2.12.8.c
  * @Description:
  * 在C语言中，函数可以调用另一个函数。编写一个程序，调用一个名为one_three()的函数。该函数在一行打印单词“one”，再调用第2个函数
@@ -29,10 +29,10 @@ int main() {
 	return 0;
 }
 
-void tow() { printf("tow\n"); }
-
 void one_three() {
 	printf("one\n");
-	tow();
+	two();
 	printf("three\n");
 }
+
+void two() { printf("two\n"); }
