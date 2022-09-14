@@ -2,8 +2,8 @@
  * @Author: qksuki qksuki@outlook.com
  * @Date: 2022-09-12 15:34:09
  * @LastEditors: qksuki qksuki@outlook.com
- * @LastEditTime: 2022-09-14 18:23:07
- * @FilePath: \codes\c\c_primer\ans\chapter\chapter_1\1.131.c
+ * @LastEditTime: 2022-09-14 19:34:29
+ * @FilePath: \codes\c\c_primer\ans\chapter\chapter_1\1.13.1.c
  * @Description:
  * 你刚被MacroMuscle有限公司聘用。该公司准备进入欧洲市场，需要一个把英寸单位转换为厘米
  * 单位（1
@@ -18,7 +18,7 @@ int main(void) {
 	printf("input the inches:\n");
 	scanf("%lf", &inch);
 	cm = inch * 2.54;
-	printf("%g cm\n", cm);
+	printf("%f cm\n", cm);
 
 	return 0;
 }
