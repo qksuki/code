@@ -2,7 +2,7 @@
  * @Author: qksuki qksuki@outlook.com
  * @Date: 2022-10-08 19:07:47
  * @LastEditors: qksuki qksuki@outlook.com
- * @LastEditTime: 2022-10-08 19:25:00
+ * @LastEditTime: 2022-10-09 16:45:14
  * @FilePath: \codes\c\testCode\Problem\LuoGu\Level_01\B2064.c
  * @Description:
  * https://www.luogu.com.cn/problem/B2064
@@ -11,7 +11,7 @@
  */
 
 #include <stdio.h>
-int getFibNum(int index);
+int getFibNum(int index, int anserr);
 int main() {
 	// int line;
 	// scanf("%d", &line);
@@ -21,22 +21,19 @@ int main() {
 	// for (int i = 0; i < line; i++) {
 	// 	scanf("%d", &sout[i]);
 	// }
-
+	int anser = 1;
 	int a;
 	scanf("%d", &a);
-	printf("%d", getFibNum(a));
+	printf("%d", getFibNum(a, anser));
 
 	return 0;
 }
 
-int getFibNum(int index) {
-	int anser = 1;
-	if (index == 1 || index == 2) {
-		anser = 1;
-	} else {
-		for (int i = 0; i < index - 2; i++) {
-			anser += anser;
-		}
+int getFibNum(int index, int anserr) {
+
+	if (index >= 3) {
+		anserr += getFibNum(index, anserr);
+		index--;
 	}
-	return anser;
+	return anserr;
 }
