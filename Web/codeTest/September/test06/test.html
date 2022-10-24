@@ -1,0 +1,58 @@
+<!--
+ * @Author: qksuki qksuki@outlook.com
+ * @Date: 2022-10-23 23:21:23
+ * @LastEditors: qksuki qksuki@outlook.com
+ * @LastEditTime: 2022-10-23 23:21:30
+ * @FilePath: \codes\Web\codeTest\September\test06\test.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by qksuki qksuki@outlook.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .test ul {
+        list-style-type: none;
+      }
+
+      .test ul li {
+        float: left;
+
+        /*以下设置仅为方便查看效果*/
+        width: 50px;
+        height: 20px;
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      .test ul li ul {
+        display: none;
+      }
+
+      .test li:hover ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="test">
+      <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>
+          C
+          <ul>
+            <li>C1</li>
+            <li>C2</li>
+            <li>C3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
