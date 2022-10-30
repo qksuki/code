@@ -1,13 +1,22 @@
-/* 
+/*
  * @Author: qksuki qksuki@outlook.com
  * @Date: 2022/10/29 19:41
- * @Description: 
- * 
- * Copyright (c) 2022 by qksuki qksuki@outlook.com, All Rights Reserved. 
-*/
+ * @Description:
+ *
+ * Copyright (c) 2022 by qksuki qksuki@outlook.com, All Rights Reserved.
+ */
 #include <stdio.h>
 
+void binary(int n) {
+    if (n)
+        binary(n / 2);
+    else
+        return;
+    printf("%d", n % 2);
+}
+
 int main() {
+    setbuf(stdout, NULL);
     int num = 0;
     int base;
     printf("输入 -1 结束进程\n");
@@ -17,18 +26,16 @@ int main() {
         printf("请输入要转换的进制数\n");
         scanf("%d", &base);
         switch (base) {
-            case 2: {
-                printf("转换结果为: %#o", num);
+            case 2:
+                binary(num);
+                printf("\n");
                 break;
-            }
-            case 8: {
-                printf("转换结果为: %#o", num);
+            case 8:
+                printf("转换结果为: %#o\n", num);
                 break;
-            }
-            case 16: {
-                printf("转换结果为: %#x", num);
+            case 16:
+                printf("转换结果为: %#x\n", num);
                 break;
-            }
         }
     }
     return 0;
